@@ -1,0 +1,2473 @@
+fileFormatVersion: 2
+guid: 1813d8427c0a88b4e873e61a4ff61c9e
+timeCreated: 1481935749
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sakura_clean_0
+    21300002: Sakura_clean_1
+    21300004: Sakura_clean_2
+    21300006: Sakura_clean_3
+    21300008: Sakura_clean_4
+    21300010: Sakura_clean_5
+    21300012: Sakura_clean_7_running
+    21300014: Sakura_clean_8_running
+    21300016: Sakura_clean_9_running
+    21300018: Sakura_clean_10_running
+    21300020: Sakura_clean_11_running
+    21300022: Sakura_clean_12_running
+    21300024: Sakura_clean_13_jumping
+    21300026: Sakura_clean_14_jumping
+    21300028: Sakura_clean_15_falling
+    21300030: Sakura_clean_16_falling
+    21300032: Sakura_clean_17_falling
+    21300034: Sakura_clean_18
+    21300036: Sakura_clean_19
+    21300038: Sakura_clean_20
+    21300040: Sakura_clean_21
+    21300042: Sakura_clean_22
+    21300044: Sakura_clean_23
+    21300046: Sakura_clean_24
+    21300048: Sakura_clean_25
+    21300050: Sakura_clean_26
+    21300052: Sakura_clean_27
+    21300054: Sakura_clean_28
+    21300056: Sakura_clean_29
+    21300058: Sakura_clean_30
+    21300060: Sakura_clean_31
+    21300062: Sakura_clean_32
+    21300064: Sakura_clean_33
+    21300066: Sakura_clean_34_attack_g_h
+    21300068: Sakura_clean_35_attack_g_h
+    21300070: Sakura_clean_36_attack_g_h
+    21300072: Sakura_clean_37_attack_g_h
+    21300074: Sakura_clean_39_attack_g_h
+    21300076: Sakura_clean_40
+    21300078: Sakura_clean_41
+    21300080: Sakura_clean_42
+    21300082: Sakura_clean_43
+    21300084: Sakura_clean_44
+    21300086: Sakura_clean_45
+    21300088: Sakura_clean_46
+    21300090: Sakura_clean_47
+    21300092: Sakura_clean_48
+    21300094: Sakura_clean_49
+    21300096: Sakura_clean_50
+    21300098: Sakura_clean_51_attack_g_h
+    21300100: Sakura_clean_52_attack_g_h
+    21300102: Sakura_clean_53_attack_g_h
+    21300104: Sakura_clean_54_attack_g_h
+    21300106: Sakura_clean_55_attack_g_h
+    21300108: Sakura_clean_56
+    21300110: Sakura_clean_57
+    21300112: Sakura_clean_58
+    21300114: Sakura_clean_59
+    21300116: Sakura_clean_60
+    21300118: Sakura_clean_61
+    21300120: Sakura_clean_62
+    21300122: Sakura_clean_63
+    21300124: Sakura_clean_64
+    21300126: Sakura_clean_65
+    21300128: Sakura_clean_66
+    21300130: Sakura_clean_67
+    21300132: Sakura_clean_68
+    21300134: Sakura_clean_69
+    21300136: Sakura_clean_70
+    21300138: Sakura_clean_71
+    21300140: Sakura_clean_72
+    21300142: Sakura_clean_74
+    21300144: Sakura_clean_75
+    21300146: Sakura_clean_76
+    21300148: Sakura_clean_77
+    21300150: Sakura_clean_78
+    21300152: Sakura_clean_79
+    21300154: Sakura_clean_80
+    21300156: Sakura_clean_81
+    21300158: Sakura_clean_82
+    21300160: Sakura_clean_83
+    21300162: Sakura_clean_84
+    21300164: Sakura_clean_85
+    21300166: Sakura_clean_86
+    21300168: Sakura_clean_93
+    21300170: Sakura_clean_96
+    21300172: Sakura_clean_97
+    21300174: Sakura_clean_107
+    21300176: Sakura_clean_111
+    21300178: Sakura_clean_112
+    21300180: Sakura_clean_113
+    21300182: Sakura_clean_115
+    21300184: Sakura_clean_116
+    21300186: Sakura_clean_120
+    21300188: Sakura_clean_123
+    21300190: Sakura_clean_125
+    21300192: Sakura_clean_132
+    21300194: Sakura_clean_142
+    21300196: Sakura_clean_143
+    21300198: Sakura_clean_144
+    21300200: Sakura_clean_145
+    21300202: Sakura_clean_146
+    21300204: Sakura_clean_147
+    21300206: Sakura_clean_148
+    21300208: Sakura_clean_149
+    21300210: Sakura_clean_150
+    21300212: Sakura_clean_151
+    21300214: Sakura_clean_152
+    21300216: Sakura_clean_153
+    21300218: Sakura_clean_154
+    21300220: Sakura_clean_155
+    21300222: Sakura_clean_156
+    21300224: Sakura_clean_157
+    21300226: Sakura_clean_158
+    21300228: Sakura_clean_159
+    21300230: Sakura_clean_160
+    21300232: Sakura_clean_161
+    21300234: Sakura_clean_162
+    21300236: Sakura_clean_163
+    21300238: Sakura_clean_176
+    21300240: Sakura_clean_177
+    21300242: Sakura_clean_179
+    21300244: Sakura_clean_180
+    21300246: Sakura_clean_182
+    21300248: Sakura_clean_183
+    21300250: Sakura_clean_184
+    21300252: Sakura_clean_185
+    21300254: Sakura_clean_186
+    21300256: Sakura_clean_187
+    21300258: Sakura_clean_188
+    21300260: Sakura_clean_189
+    21300262: Sakura_clean_190
+    21300264: Sakura_clean_191
+    21300266: Sakura_clean_192
+    21300268: Sakura_clean_193
+    21300270: Sakura_clean_194
+    21300272: Sakura_clean_195
+    21300274: Sakura_clean_196
+    21300276: Sakura_clean_197
+    21300278: Sakura_clean_198
+    21300280: Sakura_clean_199
+    21300282: Sakura_clean_200
+    21300284: Sakura_clean_201
+    21300286: Sakura_clean_202
+    21300288: Sakura_clean_203
+    21300290: Sakura_clean_204
+    21300292: Sakura_clean_205
+    21300294: Sakura_clean_206
+    21300296: Sakura_clean_208
+    21300298: Sakura_clean_209
+    21300300: Sakura_clean_210
+    21300302: Sakura_clean_211
+    21300304: Sakura_clean_212
+    21300306: Sakura_clean_213
+    21300308: Sakura_clean_214
+    21300310: Sakura_clean_215
+    21300312: Sakura_clean_216
+    21300314: Sakura_clean_217
+    21300316: Sakura_clean_218
+    21300318: Sakura_clean_219
+    21300320: Sakura_clean_220
+    21300322: Sakura_clean_221
+    21300324: Sakura_clean_222
+    21300326: Sakura_clean_223
+    21300328: Sakura_clean_224
+    21300330: Sakura_clean_225
+    21300332: Sakura_clean_226
+    21300334: Sakura_clean_87
+    21300336: Sakura_clean_88
+    21300338: Sakura_clean_89
+    21300340: Sakura_clean_38
+    21300342: Sakura_clean_73
+    21300344: Sakura_clean_0_idle
+    21300346: Sakura_clean_1_idle
+    21300348: Sakura_clean_2_idle
+    21300350: Sakura_clean_3_idle
+    21300352: Sakura_clean_4_idle
+    21300354: Sakura_clean_5_idle
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sakura_clean_0_idle
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1583
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_1_idle
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1583
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_2_idle
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1583
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_3_idle
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1583
+        width: 24
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_4_idle
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1583
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_5_idle
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1583
+        width: 25
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_7_running
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1539
+        width: 33
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_8_running
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1539
+        width: 36
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_9_running
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1539
+        width: 27
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_10_running
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1539
+        width: 34
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_11_running
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1539
+        width: 39
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_12_running
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1539
+        width: 28
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_13_jumping
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1489
+        width: 19
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_14_jumping
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1489
+        width: 19
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_15_falling
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1489
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_16_falling
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1489
+        width: 26
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_17_falling
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1489
+        width: 21
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_18
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1489
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_19
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1491
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_20
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1491
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_21
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1491
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_22
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1491
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_23
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1491
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_24
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1491
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_25
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1492
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1439
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1439
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_28
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1439
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1439
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_30
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1439
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_31
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1439
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_32
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1439
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_33
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1439
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_34_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1439
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_35_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1439
+        width: 22
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_36_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1439
+        width: 47
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_37_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1439
+        width: 38
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_39_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1439
+        width: 20
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1374
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_41
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1374
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_42
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1374
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_43
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1374
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_44
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1374
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_45
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1374
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_46
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1374
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_47
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1374
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_48
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1374
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_49
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1374
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_50
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1374
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_51_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1374
+        width: 22
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_52_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1374
+        width: 43
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_53_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1374
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_54_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1374
+        width: 29
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_55_attack_g_h
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1374
+        width: 25
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1321
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_57
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1321
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_58
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1320
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_59
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1309
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_60
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1318
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1318
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_62
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1318
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_63
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1318
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_64
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1318
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_65
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1263
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_66
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1263
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_67
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1268
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1263
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_69
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1259
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_70
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1261
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_71
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1261
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_72
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1261
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_74
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1040
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_75
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1040
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_76
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1040
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_77
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1040
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_78
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1040
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_79
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1040
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_80
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1040
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_81
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1040
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_82
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1039
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_83
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1039
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_84
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1040
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_85
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1040
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_86
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 968
+        width: 175
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_93
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 968
+        width: 178
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_96
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 968
+        width: 203
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_97
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 968
+        width: 96
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_107
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 876
+        width: 214
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_111
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 877
+        width: 250
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_112
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 916
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_113
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 916
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_115
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 899
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_116
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 899
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_120
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 798
+        width: 271
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_123
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 798
+        width: 279
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_125
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 822
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_132
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 758
+        width: 291
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_142
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 505
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_143
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 504
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_144
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 504
+        width: 19
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_145
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 504
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_146
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 504
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_147
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 504
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_148
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 504
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_149
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 504
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_150
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 504
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_151
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 502
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_152
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 503
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_153
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 505
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_154
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 506
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_155
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 506
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_156
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 506
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_157
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 506
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_158
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 506
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_159
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 506
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_160
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 506
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_161
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 506
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_162
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 506
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_163
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 320
+        width: 89
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_176
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_177
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 347
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_179
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 320
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_180
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 320
+        width: 53
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_182
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 320
+        width: 57
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_183
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 320
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_184
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_185
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 234
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_186
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 234
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_187
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 234
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_188
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 234
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_189
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 234
+        width: 16
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_190
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 234
+        width: 19
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_191
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 234
+        width: 20
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_192
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 234
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_193
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 250
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_194
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 236
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_195
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 237
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_196
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 238
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_197
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 236
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_198
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 237
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_199
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 236
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_200
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 237
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_201
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 237
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_202
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 237
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_203
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 237
+        width: 16
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_204
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 237
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_205
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 237
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_206
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 237
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_208
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 153
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_209
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 183
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_210
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 176
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_211
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 153
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_212
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 183
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_213
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_214
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 146
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_215
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 145
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_216
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 145
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_217
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 145
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_218
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 146
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_219
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 146
+        width: 13
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_220
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 145
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_221
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 145
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_222
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 145
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_223
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 145
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_224
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 145
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_225
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 146
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_226
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 145
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_87
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 744
+        width: 243
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_88
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 745
+        width: 219
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_89
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 758
+        width: 242
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_38
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 327
+        width: 80
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_73
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 320
+        width: 77
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
