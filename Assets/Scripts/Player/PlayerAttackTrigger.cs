@@ -5,12 +5,13 @@ public class PlayerAttackTrigger : MonoBehaviour
 {
 	public float AttackDeadlyRangeStart = 0;
 	public float AttackDeadlyRangeEnd = 0.5f;
-	public float AttackCooldown = 1.0f;
+	public float AttackCooldown = 1f;
+	public float AttackVelocityBoost = 5f;
 	public float AnimationLength = 0.5f;
+	public Player player;
 
 	private Collider2D attackCollider;
 	private float attackTimer = 0;
-	public Player player;
 
 	private void Awake()
 	{
@@ -25,6 +26,16 @@ public class PlayerAttackTrigger : MonoBehaviour
 		if (Input.GetKey(KeyCode.F) && (attackTimer == 0 || attackTimer > AttackCooldown))
 		{
 			player.UnitState |= Enums.UnitStateEnum.Attacking;
+
+			var velocityBoost = AttackVelocityBoost;
+
+			if ((player.UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft)))
+			{
+				velocityBoost = -velocityBoost;
+			}
+
+			player.rigidBody.velocity = new Vector2(player.rigidBody.velocity.x + velocityBoost, player.rigidBody.velocity.y);
+
 			attackTimer = 0;
 		}
 

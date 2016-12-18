@@ -4,12 +4,12 @@ using UnityEngine;
 public class GroundedTrigger : MonoBehaviour
 {
 
-	private Player player;
+	private Unit unit;
 
 	// Use this for initialization
 	void Start()
 	{
-		player = gameObject.GetComponentInParent<Player>();
+		unit = gameObject.GetComponentInParent<Unit>();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +19,7 @@ public class GroundedTrigger : MonoBehaviour
 			|| collision.sharedMaterial.name == "Unit"
 			|| collision.sharedMaterial.name == "Player")
 		{
-			player.UnitState |= Enums.UnitStateEnum.Landing;
+			unit.UnitState |= Enums.UnitStateEnum.Landing;
 		}
 	}
 
@@ -30,7 +30,7 @@ public class GroundedTrigger : MonoBehaviour
 			|| collision.sharedMaterial.name == "Unit"
 			|| collision.sharedMaterial.name == "Player")
 		{
-			player.UnitState = player.UnitState.NAND(Enums.UnitStateEnum.Grounded);
+			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Grounded);
 		}
 	}
 }
