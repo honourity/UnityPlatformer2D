@@ -34,5 +34,10 @@ public class Player : Unit
 			UnitState |= Enums.UnitStateEnum.Moving;
 			rigidBody.velocity = new Vector2(-RunSpeed, rigidBody.velocity.y);
 		}
+
+		if (Input.GetKey(KeyCode.F))
+		{
+			gameObject.GetComponentInChildren<HorizontalKickTrigger>().TryAttack = true;
+		}
 	}
 }
