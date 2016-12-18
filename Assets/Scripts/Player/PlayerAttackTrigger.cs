@@ -6,17 +6,16 @@ public class PlayerAttackTrigger : MonoBehaviour {
     public float AttackDeadlyRangeEnd = 0.5f;
     public float AttackCooldown = 1.0f;
     public float AnimationLength = 0.5f;
-    public bool Attacking;
 
     //private Animator animator;
     private Collider2D attackCollider;
     private float attackTimer = 0;
+    public Player player;
 
     private void Awake()
     {
         attackCollider = gameObject.GetComponent<Collider2D>();
         attackCollider.enabled = false;
-        Attacking = false;
     }
 
     private void Update()
@@ -25,11 +24,12 @@ public class PlayerAttackTrigger : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.F) && (attackTimer == 0 || attackTimer > AttackCooldown))
         {
-            Attacking = true;
+
+            player.PlayerState |= Player.PlayerStateEnum.Attacking;
             attackTimer = 0;
         }
 
-        if (Attacking)
+        if (player.PlayerState.HasFlag(Player.PlayerStateEnum.Attacking))
         {
             if (attackTimer < AnimationLength)
             {
@@ -44,7 +44,7 @@ public class PlayerAttackTrigger : MonoBehaviour {
             }
             else
             {
-                Attacking = false;
+                player.PlayerState = player.PlayerState.NAND(Player.PlayerStateEnum.Attacking);
                 attackCollider.enabled = false;
             }
         }

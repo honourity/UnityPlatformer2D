@@ -14,7 +14,7 @@ public class PlayerGroundedTrigger : MonoBehaviour {
     {
         if (collision.sharedMaterial.name == "Ground")
         {
-            player.Grounded = true;
+            player.PlayerState |= Player.PlayerStateEnum.Landing;
         }
     }
 
@@ -22,7 +22,7 @@ public class PlayerGroundedTrigger : MonoBehaviour {
     {
         if (collision.sharedMaterial.name == "Ground")
         {
-            player.Grounded = false;
+            player.PlayerState = player.PlayerState.NAND(Player.PlayerStateEnum.Grounded);
         }
     }
 }
