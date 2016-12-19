@@ -6,16 +6,18 @@ public class Enemy : Unit
 {
 	public override void TakeAction()
 	{
-		//stand there doing nothing like an idiot
+		//UnitState |= Enums.UnitStateEnum.FacingRight;
+		//rigidBody.velocity = new Vector2(RunSpeed, rigidBody.velocity.y);
+		//UnitState |= Enums.UnitStateEnum.Moving;
 	}
 
-	internal void Attacked(int incomingDamage)
+	internal void Attacked(float incomingDamage)
 	{
-		health -= incomingDamage;
+		HealthCurrent -= incomingDamage;
 
-		if (health <= 0)
+		if (HealthCurrent <= 0)
 		{
-			gameObject.SetActive(false);
+			Destroy(gameObject);
 		}
 	}
 }

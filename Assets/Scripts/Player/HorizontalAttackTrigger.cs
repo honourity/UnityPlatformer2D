@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Assets.Scripts;
 using UnityEngine;
 
@@ -9,18 +10,21 @@ public class HorizontalAttackTrigger : MonoBehaviour
 	public float Attack1Cooldown = 1f;
 	public float Attack1VelocityBoost = 5f;
 	public float Attack1AnimationLength = 0.5f;
+	public float Attack1Damage = 1;
 
 	public float Attack2DeadlyRangeStart = 0;
 	public float Attack2DeadlyRangeEnd = 0.5f;
 	public float Attack2Cooldown = 1f;
 	public float Attack2VelocityBoost = 5f;
 	public float Attack2AnimationLength = 0.5f;
+	public float Attack2Damage = 2;
 
 	public float Attack3DeadlyRangeStart = 0;
 	public float Attack3DeadlyRangeEnd = 0.5f;
 	public float Attack3Cooldown = 1f;
 	public float Attack3VelocityBoost = 5f;
 	public float Attack3AnimationLength = 0.5f;
+	public float Attack3Damage = 5;
 
 	public bool TryAttack = false;
 
@@ -195,7 +199,18 @@ public class HorizontalAttackTrigger : MonoBehaviour
 		var enemy = collision.GetComponent<Enemy>();
 		if (enemy != null)
 		{
-			enemy.Attacked(20);
+			if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1))
+			{
+				enemy.Attacked(Attack1Damage);
+			}
+			else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2))
+			{
+				enemy.Attacked(Attack2Damage);
+			}
+			else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3))
+			{
+				enemy.Attacked(Attack3Damage);
+			}
 		}
 	}
 
@@ -208,12 +223,17 @@ public class HorizontalAttackTrigger : MonoBehaviour
 	{
 		if (!unit.UnitState.HasFlag(Enums.UnitStateEnum.Moving))
 		{
+			if (Math.Abs(unit.rigidBody.velocity.x) - boost > 0)
+			{
+				boost -= Math.Abs(unit.rigidBody.velocity.x);
+			}
+
 			if ((unit.UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft)))
 			{
 				boost = -boost;
 			}
 
-			unit.rigidBody.velocity = new Vector2(boost, unit.rigidBody.velocity.y);
+			unit.rigidBody.velocity = new Vector2(unit.rigidBody.velocity.x + boost, unit.rigidBody.velocity.y);
 		}
 	}
 }

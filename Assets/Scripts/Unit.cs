@@ -4,11 +4,13 @@ using UnityEngine;
 
 public abstract class Unit : MonoBehaviour
 {
-	public int health = 100;
+	public float HealthMax = 100f;
+	public float HealthCurrent = 100f;
 
-	public float RunSpeed = 5;
-	public float JumpHeight = 20;
-	public float MoveDampingRate = 0.75f;
+	public float RunSpeed = 6.1875f;
+	public float JumpHeight = 12f;
+	public float MoveDampingRate = 0.5f;
+	public float FlightDampingRate = 0.1f;
 	public Enums.UnitStateEnum UnitState = Enums.UnitStateEnum.Grounded;
 
 	internal Rigidbody2D rigidBody;
@@ -22,6 +24,9 @@ public abstract class Unit : MonoBehaviour
 	{
 		rigidBody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
+
+		MoveDampingRate += 1;
+		FlightDampingRate += 1;
 	}
 
 	// Update is called once per frame
@@ -91,16 +96,17 @@ public abstract class Unit : MonoBehaviour
 
 	private void MotionDamping()
 	{
-		if (Math.Abs(rigidBody.velocity.x) > 0 && !UnitState.HasFlag(Enums.UnitStateEnum.Moving))
+		if (Math.Abs(rigidBody.velocity.x) > 0
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Moving)
+			&& UnitState.HasFlag(Enums.UnitStateEnum.Grounded))
 		{
-			if (rigidBody.velocity.x > 0)
-			{
-				rigidBody.velocity = new Vector2(rigidBody.velocity.x * (MoveDampingRate * Time.deltaTime), rigidBody.velocity.y);
-			}
-			else
-			{
-				rigidBody.velocity = new Vector2(rigidBody.velocity.x * (MoveDampingRate * Time.deltaTime), rigidBody.velocity.y);
-			}
+			rigidBody.velocity = new Vector2(rigidBody.velocity.x / MoveDampingRate, rigidBody.velocity.y);
+		}
+		else if (Math.Abs(rigidBody.velocity.x) > 0
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Moving)
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Grounded))
+		{
+			rigidBody.velocity = new Vector2(rigidBody.velocity.x / FlightDampingRate, rigidBody.velocity.y);
 		}
 	}
 }

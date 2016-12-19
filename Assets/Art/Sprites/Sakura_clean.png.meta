@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1813d8427c0a88b4e873e61a4ff61c9e
-timeCreated: 1481935749
+timeCreated: 1482108250
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -42,22 +42,22 @@ TextureImporter:
     21300070: Sakura_clean_36_attack_g_h
     21300072: Sakura_clean_37_attack_g_h
     21300074: Sakura_clean_39_attack_g_h
-    21300076: Sakura_clean_40
-    21300078: Sakura_clean_41
-    21300080: Sakura_clean_42
-    21300082: Sakura_clean_43
-    21300084: Sakura_clean_44
-    21300086: Sakura_clean_45
-    21300088: Sakura_clean_46
+    21300076: Sakura_clean_40_overheadpunch
+    21300078: Sakura_clean_41_overheadpunch
+    21300080: Sakura_clean_42_overheadpunch
+    21300082: Sakura_clean_43_overheadpunch
+    21300084: Sakura_clean_44_overheadpunch
+    21300086: Sakura_clean_45_overheadpunch
+    21300088: Sakura_clean_46_overheadpunch
     21300090: Sakura_clean_47
     21300092: Sakura_clean_48
     21300094: Sakura_clean_49
     21300096: Sakura_clean_50
-    21300098: Sakura_clean_51_attack_g_h
-    21300100: Sakura_clean_52_attack_g_h
-    21300102: Sakura_clean_53_attack_g_h
-    21300104: Sakura_clean_54_attack_g_h
-    21300106: Sakura_clean_55_attack_g_h
+    21300098: Sakura_clean_51_attack_swoop
+    21300100: Sakura_clean_52_attack_swoop
+    21300102: Sakura_clean_53_attack_swoop
+    21300104: Sakura_clean_54_attack_swoop
+    21300106: Sakura_clean_55_attack_swoop
     21300108: Sakura_clean_56
     21300110: Sakura_clean_57
     21300112: Sakura_clean_58
@@ -725,93 +725,93 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_40
+      name: Sakura_clean_40_overheadpunch
       rect:
         serializedVersion: 2
         x: 2
         y: 1374
         width: 25
         height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_41
+      name: Sakura_clean_41_overheadpunch
       rect:
         serializedVersion: 2
         x: 30
         y: 1374
         width: 21
         height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_42
+      name: Sakura_clean_42_overheadpunch
       rect:
         serializedVersion: 2
         x: 54
         y: 1374
         width: 37
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_43
+      name: Sakura_clean_43_overheadpunch
       rect:
         serializedVersion: 2
         x: 94
         y: 1374
         width: 41
         height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_44
+      name: Sakura_clean_44_overheadpunch
       rect:
         serializedVersion: 2
         x: 138
         y: 1374
         width: 32
         height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_45
+      name: Sakura_clean_45_overheadpunch
       rect:
         serializedVersion: 2
         x: 173
         y: 1374
         width: 26
         height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_46
+      name: Sakura_clean_46_overheadpunch
       rect:
         serializedVersion: 2
         x: 202
         y: 1374
         width: 26
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -868,7 +868,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_51_attack_g_h
+      name: Sakura_clean_51_attack_swoop
       rect:
         serializedVersion: 2
         x: 389
@@ -881,7 +881,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_52_attack_g_h
+      name: Sakura_clean_52_attack_swoop
       rect:
         serializedVersion: 2
         x: 414
@@ -894,7 +894,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_53_attack_g_h
+      name: Sakura_clean_53_attack_swoop
       rect:
         serializedVersion: 2
         x: 460
@@ -907,7 +907,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_54_attack_g_h
+      name: Sakura_clean_54_attack_swoop
       rect:
         serializedVersion: 2
         x: 497
@@ -920,7 +920,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sakura_clean_55_attack_g_h
+      name: Sakura_clean_55_attack_swoop
       rect:
         serializedVersion: 2
         x: 529
