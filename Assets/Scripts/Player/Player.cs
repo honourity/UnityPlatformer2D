@@ -3,9 +3,15 @@ using UnityEngine;
 
 public class Player : Unit
 {
+	private HorizontalAttackTrigger horizontalAttackTrigger;
+
+	void Awake()
+	{
+		horizontalAttackTrigger = gameObject.GetComponentInChildren<HorizontalAttackTrigger>();
+	}
+
 	public override void TakeAction()
 	{
-		// Check input and take actions
 		if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			if (!UnitState.HasFlag(Enums.UnitStateEnum.DoubleJumping))
@@ -24,20 +30,20 @@ public class Player : Unit
 				}
 			}
 		}
-		else if (Input.GetKey(KeyCode.RightArrow))
+		else if (Input.GetKey(KeyCode.RightArrow) && !(UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft) && UnitState.HasFlag(Enums.UnitStateEnum.Attacking)))
 		{
 			UnitState |= Enums.UnitStateEnum.Moving;
 			rigidBody.velocity = new Vector2(RunSpeed, rigidBody.velocity.y);
 		}
-		else if (Input.GetKey(KeyCode.LeftArrow))
+		else if (Input.GetKey(KeyCode.LeftArrow) && !(UnitState.HasFlag(Enums.UnitStateEnum.FacingRight) && UnitState.HasFlag(Enums.UnitStateEnum.Attacking)))
 		{
 			UnitState |= Enums.UnitStateEnum.Moving;
 			rigidBody.velocity = new Vector2(-RunSpeed, rigidBody.velocity.y);
 		}
 
-		if (Input.GetKey(KeyCode.F))
+		if (Input.GetKeyDown(KeyCode.F))
 		{
-			gameObject.GetComponentInChildren<HorizontalKickTrigger>().TryAttack = true;
+			horizontalAttackTrigger.TryAttack = true;
 		}
 	}
 }

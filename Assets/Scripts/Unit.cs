@@ -1,15 +1,21 @@
-﻿using Assets.Scripts;
+﻿using System;
+using Assets.Scripts;
 using UnityEngine;
 
 public abstract class Unit : MonoBehaviour
 {
+	public int health = 100;
+
 	public float RunSpeed = 5;
 	public float JumpHeight = 20;
-	public float JumpDampening = 0.75f;
+	public float MoveDampingRate = 0.75f;
 	public Enums.UnitStateEnum UnitState = Enums.UnitStateEnum.Grounded;
 
 	internal Rigidbody2D rigidBody;
 	internal Animator animator;
+
+	//placeholder for checking inputs or running AI decisions go here as an override
+	public abstract void TakeAction();
 
 	// Use this for initialization
 	void Start()
@@ -38,13 +44,7 @@ public abstract class Unit : MonoBehaviour
 
 		TakeAction();
 
-		//jump horizontal movement dampening
-		if (rigidBody.velocity.x != 0 &&
-			!UnitState.HasFlag(Enums.UnitStateEnum.Moving) &&
-			!UnitState.HasFlag(Enums.UnitStateEnum.Attacking))
-		{
-			rigidBody.velocity = new Vector2(rigidBody.velocity.x * JumpDampening, rigidBody.velocity.y);
-		}
+		MotionDamping();
 
 		if (rigidBody.velocity.y < 0)
 		{
@@ -53,6 +53,7 @@ public abstract class Unit : MonoBehaviour
 		}
 		else if (rigidBody.velocity.y >= 0)
 		{
+			UnitState |= Enums.UnitStateEnum.Jumping;
 			UnitState = UnitState.NAND(Enums.UnitStateEnum.Falling);
 		}
 
@@ -83,8 +84,23 @@ public abstract class Unit : MonoBehaviour
 		animator.SetBool("Jumping", UnitState.HasFlag(Enums.UnitStateEnum.Jumping));
 		animator.SetBool("Falling", UnitState.HasFlag(Enums.UnitStateEnum.Falling));
 		animator.SetBool("Attacking", UnitState.HasFlag(Enums.UnitStateEnum.Attacking));
+		animator.SetBool("HorizontalAttack1", UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1));
+		animator.SetBool("HorizontalAttack2", UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2));
+		animator.SetBool("HorizontalAttack3", UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3));
 	}
 
-	//checking inputs or running AI decisions go here as an override
-	public abstract void TakeAction();
+	private void MotionDamping()
+	{
+		if (Math.Abs(rigidBody.velocity.x) > 0 && !UnitState.HasFlag(Enums.UnitStateEnum.Moving))
+		{
+			if (rigidBody.velocity.x > 0)
+			{
+				rigidBody.velocity = new Vector2(rigidBody.velocity.x * (MoveDampingRate * Time.deltaTime), rigidBody.velocity.y);
+			}
+			else
+			{
+				rigidBody.velocity = new Vector2(rigidBody.velocity.x * (MoveDampingRate * Time.deltaTime), rigidBody.velocity.y);
+			}
+		}
+	}
 }

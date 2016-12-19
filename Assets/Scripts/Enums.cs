@@ -29,15 +29,18 @@ namespace Assets.Scripts
 		[Flags]
 		public enum UnitStateEnum
 		{
-			Grounded = 0x0001,
-			Moving = 0x0002,
-			FacingRight = 0x0004,
-			FacingLeft = 0x0008,
-			Attacking = 0x0010,
-			Jumping = 0x0020,
-			DoubleJumping = 0x0040,
-			Falling = 0x0080,
-			Landing = 0x0100,
+			Grounded =		0x0001,
+			Moving =		0x0002,
+			FacingRight =	0x0004,
+			FacingLeft =	0x0008,
+			Jumping =		0x0010,
+			DoubleJumping = 0x0020,
+			Falling =		0x0040,
+			Landing =		0x0080,
+			Attacking =		0x0100,
+			AttackingH1 =	0x0200,
+			AttackingH2 =	0x0400,
+			AttackingH3 =	0x0800,
 		}
 	}
 }
