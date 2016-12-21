@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 1813d8427c0a88b4e873e61a4ff61c9e
-timeCreated: 1482108250
+timeCreated: 1482237012
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Sakura_clean_0
-    21300002: Sakura_clean_1
+    21300000: Sakura_clean_DashPuff1
+    21300002: Sakura_clean_DashPuff3
     21300004: Sakura_clean_2
     21300006: Sakura_clean_3
     21300008: Sakura_clean_4
@@ -182,6 +182,7 @@ TextureImporter:
     21300350: Sakura_clean_3_idle
     21300352: Sakura_clean_4_idle
     21300354: Sakura_clean_5_idle
+    21300356: Sakura_clean_DashPuff2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2463,6 +2464,45 @@ TextureImporter:
         height: 149
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_DashPuff1
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 320
+        width: 35
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_DashPuff2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 320
+        width: 37
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sakura_clean_DashPuff3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 318
+        width: 36
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
