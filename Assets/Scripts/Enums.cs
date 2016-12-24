@@ -18,7 +18,7 @@ namespace Assets.Scripts
 
         public static string StateSummary(this Enums.UnitStateEnum self)
         {
-            var result = new StringBuilder("Debug State Info");
+            var result = new StringBuilder("Debug State Info\n");
 
             foreach (var value in Enum.GetValues(typeof(Enums.UnitStateEnum)))
             {

@@ -14,9 +14,9 @@ public class DebugStateScript : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        if (Input.anyKey)
-        {
-            text.text = unit.UnitState.StateSummary();
-        }
+        //if (Input.anyKey)
+        //{
+        text.text = unit.UnitState.StateSummary();
+        //}
     }
 }

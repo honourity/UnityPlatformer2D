@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class Unit : MonoBehaviour
 {
-	public float HealthMax = 100f;
-	public float HealthCurrent = 100f;
+	public int HealthMax = 10;
+	public int HealthCurrent = 10;
 
 	public float RunSpeed = 6.1875f;
 	public float JumpHeight = 12f;

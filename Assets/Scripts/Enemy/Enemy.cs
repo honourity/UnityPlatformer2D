@@ -11,7 +11,7 @@ public class Enemy : Unit
 		//UnitState |= Enums.UnitStateEnum.Moving;
 	}
 
-	internal void Attacked(float incomingDamage)
+	internal void Attacked(int incomingDamage)
 	{
 		HealthCurrent -= incomingDamage;
 
