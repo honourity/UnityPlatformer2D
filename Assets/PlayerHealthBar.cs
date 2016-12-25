@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealthBar : MonoBehaviour
@@ -24,20 +25,28 @@ public class PlayerHealthBar : MonoBehaviour
         {
             if (Player.HealthCurrent > previousHP)
             {
-                for (int i = previousHP; i < Player.HealthCurrent; i++)
+                int tempPreviousHealth = previousHP;
+                if (tempPreviousHealth < 0) tempPreviousHealth = 0;
+
+                for (int i = tempPreviousHealth; i < Player.HealthCurrent; i++)
                 {
                     //health has increased, so set full hearts
-                    hearts[i].sprite = FullHeart;
+                    if (i < hearts.Length) hearts[i].sprite = FullHeart;
                 }
             }
             else
             {
-                for (int i = Player.HealthCurrent - 1; i <= previousHP; i++)
+                int healthCurrent = Player.HealthCurrent;
+                if (healthCurrent < 0) healthCurrent = 0;
+
+                for (int i = healthCurrent; i < previousHP; i++)
                 {
-                    //health has dropped so set empty hearts
-                    hearts[i].sprite = EmptyHeart;
+                    //health has dropped so set empty hearts.
+                    if (i < hearts.Length) hearts[i].sprite = EmptyHeart;
                 }
             }
+
+            previousHP = Player.HealthCurrent;
         }
     }
 

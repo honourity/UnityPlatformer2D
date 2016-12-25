@@ -4,33 +4,33 @@ using UnityEngine;
 public class GroundedTrigger : MonoBehaviour
 {
 
-	private Unit unit;
+    private Unit unit;
 
-	// Use this for initialization
-	void Start()
-	{
-		unit = gameObject.GetComponentInParent<Unit>();
-	}
+    // Use this for initialization
+    void Start()
+    {
+        unit = gameObject.GetComponentInParent<Unit>();
+    }
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if ((collision.sharedMaterial != null)
-			&& collision.sharedMaterial.name == "Ground"
-			|| collision.sharedMaterial.name == "Unit"
-			|| collision.sharedMaterial.name == "Player")
-		{
-			unit.UnitState |= Enums.UnitStateEnum.Landing;
-		}
-	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.sharedMaterial != null)
+            && collision.sharedMaterial.name == "Ground"
+            || collision.sharedMaterial.name == "Unit"
+            || collision.sharedMaterial.name == "Player")
+        {
+            unit.UnitState |= Enums.UnitStateEnum.Landing;
+        }
+    }
 
-	private void OnTriggerExit2D(Collider2D collision)
-	{
-		if ((collision.sharedMaterial != null)
-			&& collision.sharedMaterial.name == "Ground"
-			|| collision.sharedMaterial.name == "Unit"
-			|| collision.sharedMaterial.name == "Player")
-		{
-			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Grounded);
-		}
-	}
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if ((collision.sharedMaterial != null)
+            && collision.sharedMaterial.name == "Ground"
+            || collision.sharedMaterial.name == "Unit"
+            || collision.sharedMaterial.name == "Player")
+        {
+            unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Grounded);
+        }
+    }
 }
