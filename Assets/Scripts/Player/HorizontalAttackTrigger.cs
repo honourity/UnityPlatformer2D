@@ -5,247 +5,218 @@ using UnityEngine;
 
 public class HorizontalAttackTrigger : MonoBehaviour
 {
-    public float Attack1DeadlyRangeStart = 0;
-    public float Attack1DeadlyRangeEnd = 0.5f;
-    public float Attack1Cooldown = 1f;
-    public float Attack1VelocityBoost = 5f;
-    public float Attack1AnimationLength = 0.5f;
-    public int Attack1Damage = 1;
-    public AudioClip Attack1Sound;
+	public bool TryAttack = false;
+	private Unit unit;
 
-    public float Attack2DeadlyRangeStart = 0;
-    public float Attack2DeadlyRangeEnd = 0.5f;
-    public float Attack2Cooldown = 1f;
-    public float Attack2VelocityBoost = 5f;
-    public float Attack2AnimationLength = 0.5f;
-    public int Attack2Damage = 2;
-    public AudioClip Attack2Sound;
+	private float attackTimer;
+	private AudioSource audioSource;
 
-    public float Attack3DeadlyRangeStart = 0;
-    public float Attack3DeadlyRangeEnd = 0.5f;
-    public float Attack3Cooldown = 1f;
-    public float Attack3VelocityBoost = 5f;
-    public float Attack3AnimationLength = 0.5f;
-    public int Attack3Damage = 5;
-    public AudioClip Attack3Sound;
+	//private void Awake()
+	//{
+	//	unit = gameObject.transform.parent.gameObject.GetComponent<Unit>();
 
-    public bool TryAttack = false;
+		
+	//	attack2Collider = colliders.FirstOrDefault(collider => collider.sharedMaterial.name == "Attack2Collider");
+	//	attack3Collider = colliders.FirstOrDefault(collider => collider.sharedMaterial.name == "Attack3Collider");
 
-    private Collider2D attack1Collider;
-    private Collider2D attack2Collider;
-    private Collider2D attack3Collider;
-    private Unit unit;
+		
+	//	attack2Collider.enabled = false;
+	//	attack3Collider.enabled = false;
 
-    private float attackTimer;
-    private AudioSource audioSource;
+	//	//start large because 0 timer means attack just happened
+	//	attackTimer = 0;
 
-    private void Awake()
-    {
-        unit = gameObject.transform.parent.gameObject.GetComponent<Unit>();
+	//	audioSource = gameObject.AddComponent<AudioSource>();
+	//}
 
-        var colliders = gameObject.GetComponents<Collider2D>();
-        attack1Collider = colliders.FirstOrDefault(collider => collider.sharedMaterial.name == "Attack1Collider");
-        attack2Collider = colliders.FirstOrDefault(collider => collider.sharedMaterial.name == "Attack2Collider");
-        attack3Collider = colliders.FirstOrDefault(collider => collider.sharedMaterial.name == "Attack3Collider");
+	//private void Update()
+	//{
+	//	attackTimer += Time.deltaTime;
 
-        attack1Collider.enabled = false;
-        attack2Collider.enabled = false;
-        attack3Collider.enabled = false;
+	//	#region Process existing attack state
 
-        //start large because 0 timer means attack just happened
-        attackTimer = 0;
+	//	if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH1))
+	//	{
+	//		if (attackTimer > Attack1Cooldown)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.AttackingH1);
+	//		}
+	//		else if (attackTimer > Attack1AnimationLength)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//		}
+	//	}
+	//	else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH2))
+	//	{
+	//		if (attackTimer > Attack2Cooldown)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.AttackingH2);
+	//		}
+	//		else if (attackTimer > Attack2AnimationLength)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//		}
+	//	}
+	//	else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH3))
+	//	{
+	//		if (attackTimer > Attack3Cooldown)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.AttackingH3);
+	//		}
+	//		else if (attackTimer > Attack3AnimationLength)
+	//		{
+	//			unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Attacking);
+	//		}
+	//	}
 
-        audioSource = gameObject.AddComponent<AudioSource>();
-    }
+	//	#endregion
 
-    private void Update()
-    {
-        attackTimer += Time.deltaTime;
+	//	#region Try attack
 
-        #region Process existing attack state
+	//	if (TryAttack)
+	//	{
+	//		if (!(unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH1)
+	//			|| unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH2)
+	//			|| unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH3)))
+	//		{
+	//			unit.UnitState |= Enums.UnitStateEnun.Attacking;
+	//			unit.UnitState |= Enums.UnitStateEnun.AttackingH1;
+	//			DoVelocityBoost(Attack1VelocityBoost);
+	//			attackTimer = 0;
 
-        if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1))
-        {
-            if (attackTimer > Attack1Cooldown)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.AttackingH1);
-            }
-            else if (attackTimer > Attack1AnimationLength)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-            }
-        }
-        else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2))
-        {
-            if (attackTimer > Attack2Cooldown)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.AttackingH2);
-            }
-            else if (attackTimer > Attack2AnimationLength)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-            }
-        }
-        else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3))
-        {
-            if (attackTimer > Attack3Cooldown)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.AttackingH3);
-            }
-            else if (attackTimer > Attack3AnimationLength)
-            {
-                unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Attacking);
-            }
-        }
+	//			audioSource.PlayOneShot(Attack1Sound);
+	//		}
+	//		else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH1))
+	//		{
+	//			if (attackTimer > Attack1AnimationLength && attackTimer < Attack1Cooldown)
+	//			{
+	//				unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.AttackingH1);
+	//				unit.UnitState |= Enums.UnitStateEnun.Attacking;
+	//				unit.UnitState |= Enums.UnitStateEnun.AttackingH2;
+	//				DoVelocityBoost(Attack2VelocityBoost);
+	//				attackTimer = 0;
 
-        #endregion
+	//				audioSource.PlayOneShot(Attack2Sound);
+	//			}
+	//		}
+	//		else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH2))
+	//		{
+	//			if (attackTimer > Attack2AnimationLength && attackTimer < Attack2Cooldown)
+	//			{
+	//				unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.AttackingH2);
+	//				unit.UnitState |= Enums.UnitStateEnun.Attacking;
+	//				unit.UnitState |= Enums.UnitStateEnun.AttackingH3;
+	//				DoVelocityBoost(Attack3VelocityBoost);
+	//				attackTimer = 0;
 
-        #region Try attack
+	//				audioSource.PlayOneShot(Attack3Sound);
+	//			}
+	//		}
 
-        if (TryAttack)
-        {
-            if (!(unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1)
-                || unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2)
-                || unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3)))
-            {
-                unit.UnitState |= Enums.UnitStateEnum.Attacking;
-                unit.UnitState |= Enums.UnitStateEnum.AttackingH1;
-                DoVelocityBoost(Attack1VelocityBoost);
-                attackTimer = 0;
+	//		TryAttack = false;
+	//	}
 
-                audioSource.PlayOneShot(Attack1Sound);
-            }
-            else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1))
-            {
-                if (attackTimer > Attack1AnimationLength && attackTimer < Attack1Cooldown)
-                {
-                    unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.AttackingH1);
-                    unit.UnitState |= Enums.UnitStateEnum.Attacking;
-                    unit.UnitState |= Enums.UnitStateEnum.AttackingH2;
-                    DoVelocityBoost(Attack2VelocityBoost);
-                    attackTimer = 0;
+	//	#endregion
 
-                    audioSource.PlayOneShot(Attack2Sound);
-                }
-            }
-            else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2))
-            {
-                if (attackTimer > Attack2AnimationLength && attackTimer < Attack2Cooldown)
-                {
-                    unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.AttackingH2);
-                    unit.UnitState |= Enums.UnitStateEnum.Attacking;
-                    unit.UnitState |= Enums.UnitStateEnum.AttackingH3;
-                    DoVelocityBoost(Attack3VelocityBoost);
-                    attackTimer = 0;
+	//	#region Collider management
 
-                    audioSource.PlayOneShot(Attack3Sound);
-                }
-            }
+	//	if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH1))
+	//	{
+	//		if (attackTimer < Attack1AnimationLength)
+	//		{
+	//			if (attackTimer >= Attack1DeadlyRangeStart && attackTimer < Attack1DeadlyRangeEnd)
+	//			{
+	//				attack1Collider.enabled = true;
+	//			}
+	//			else
+	//			{
+	//				attack1Collider.enabled = false;
+	//			}
+	//		}
+	//		else
+	//		{
+	//			attack1Collider.enabled = false;
+	//		}
+	//	}
+	//	else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH2))
+	//	{
+	//		if (attackTimer < Attack2AnimationLength)
+	//		{
+	//			if (attackTimer >= Attack2DeadlyRangeStart && attackTimer < Attack2DeadlyRangeEnd)
+	//			{
+	//				attack2Collider.enabled = true;
+	//			}
+	//			else
+	//			{
+	//				attack2Collider.enabled = false;
+	//			}
+	//		}
+	//		else
+	//		{
+	//			attack2Collider.enabled = false;
+	//		}
+	//	}
+	//	else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH3))
+	//	{
+	//		if (attackTimer < Attack3AnimationLength)
+	//		{
+	//			if (attackTimer >= Attack3DeadlyRangeStart && attackTimer < Attack3DeadlyRangeEnd)
+	//			{
+	//				attack3Collider.enabled = true;
+	//			}
+	//			else
+	//			{
+	//				attack3Collider.enabled = false;
+	//			}
+	//		}
+	//	}
 
-            TryAttack = false;
-        }
+	//	#endregion
+	//}
 
-        #endregion
+	//private void OnTriggerEnter2D(Collider2D collision)
+	//{
+	//	var enemy = collision.GetComponent<Enemy>();
+	//	if (enemy != null)
+	//	{
+	//		if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH1))
+	//		{
+	//			enemy.Attacked(Attack1Damage);
+	//		}
+	//		else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH2))
+	//		{
+	//			enemy.Attacked(Attack2Damage);
+	//		}
+	//		else if (unit.UnitState.HasFlag(Enums.UnitStateEnun.AttackingH3))
+	//		{
+	//			enemy.Attacked(Attack3Damage);
+	//		}
+	//	}
+	//}
 
-        #region Collider management
+	//private void OnTriggerExit2D(Collider2D collision)
+	//{
 
-        if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1))
-        {
-            if (attackTimer < Attack1AnimationLength)
-            {
-                if (attackTimer >= Attack1DeadlyRangeStart && attackTimer < Attack1DeadlyRangeEnd)
-                {
-                    attack1Collider.enabled = true;
-                }
-                else
-                {
-                    attack1Collider.enabled = false;
-                }
-            }
-            else
-            {
-                attack1Collider.enabled = false;
-            }
-        }
-        else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2))
-        {
-            if (attackTimer < Attack2AnimationLength)
-            {
-                if (attackTimer >= Attack2DeadlyRangeStart && attackTimer < Attack2DeadlyRangeEnd)
-                {
-                    attack2Collider.enabled = true;
-                }
-                else
-                {
-                    attack2Collider.enabled = false;
-                }
-            }
-            else
-            {
-                attack2Collider.enabled = false;
-            }
-        }
-        else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3))
-        {
-            if (attackTimer < Attack3AnimationLength)
-            {
-                if (attackTimer >= Attack3DeadlyRangeStart && attackTimer < Attack3DeadlyRangeEnd)
-                {
-                    attack3Collider.enabled = true;
-                }
-                else
-                {
-                    attack3Collider.enabled = false;
-                }
-            }
-        }
+	//}
 
-        #endregion
-    }
+	//private void DoVelocityBoost(float boost)
+	//{
+	//	if (!unit.UnitState.HasFlag(Enums.UnitStateEnun.Moving))
+	//	{
+	//		if (Math.Abs(unit.rigidBody.velocity.x) - boost > 0)
+	//		{
+	//			boost -= Math.Abs(unit.rigidBody.velocity.x);
+	//		}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        var enemy = collision.GetComponent<Enemy>();
-        if (enemy != null)
-        {
-            if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH1))
-            {
-                enemy.Attacked(Attack1Damage);
-            }
-            else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH2))
-            {
-                enemy.Attacked(Attack2Damage);
-            }
-            else if (unit.UnitState.HasFlag(Enums.UnitStateEnum.AttackingH3))
-            {
-                enemy.Attacked(Attack3Damage);
-            }
-        }
-    }
+	//		if ((unit.UnitState.HasFlag(Enums.UnitStateEnun.FacingLeft)))
+	//		{
+	//			boost = -boost;
+	//		}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
-    }
-
-    private void DoVelocityBoost(float boost)
-    {
-        if (!unit.UnitState.HasFlag(Enums.UnitStateEnum.Moving))
-        {
-            if (Math.Abs(unit.rigidBody.velocity.x) - boost > 0)
-            {
-                boost -= Math.Abs(unit.rigidBody.velocity.x);
-            }
-
-            if ((unit.UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft)))
-            {
-                boost = -boost;
-            }
-
-            unit.rigidBody.velocity = new Vector2(unit.rigidBody.velocity.x + boost, unit.rigidBody.velocity.y);
-        }
-    }
+	//		unit.rigidBody.velocity = new Vector2(unit.rigidBody.velocity.x + boost, unit.rigidBody.velocity.y);
+	//	}
+	//}
 }

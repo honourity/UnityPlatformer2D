@@ -19,7 +19,7 @@ public class GroundedTrigger : MonoBehaviour
             || collision.sharedMaterial.name == "Unit"
             || collision.sharedMaterial.name == "Player")
         {
-            unit.UnitState |= Enums.UnitStateEnum.Landing;
+            unit.UnitState |= Enums.UnitStateEnun.Landing;
         }
     }
 
@@ -30,7 +30,7 @@ public class GroundedTrigger : MonoBehaviour
             || collision.sharedMaterial.name == "Unit"
             || collision.sharedMaterial.name == "Player")
         {
-            unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnum.Grounded);
+            unit.UnitState = unit.UnitState.NAND(Enums.UnitStateEnun.Grounded);
         }
     }
 }
