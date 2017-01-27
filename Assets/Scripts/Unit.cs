@@ -14,7 +14,6 @@ public abstract class Unit : MonoBehaviour
 	public float FlightDampingRate = 0.1f;
 	public Enums.UnitStateEnun UnitState = Enums.UnitStateEnun.Grounded;
 
-	public IList<Attack> AttackTypes = new List<Attack>();
 	public IList<Attack> AttackQueue = new List<Attack>();
 	public Attack CurrentAttack;
 

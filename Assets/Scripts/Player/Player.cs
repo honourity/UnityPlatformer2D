@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Player : Unit
 {
+	public KeyCode LightAttackKey = KeyCode.J;
+	public KeyCode HeavyAttackKey = KeyCode.K;
+
 	public Transform DashPuff;
 
 	private HorizontalAttackTrigger horizontalAttackTrigger;
@@ -16,7 +19,7 @@ public class Player : Unit
 
 	public override void TakeAction()
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+		if (Input.GetKeyDown(KeyCode.W))
 		{
 			if (!UnitState.HasFlag(Enums.UnitStateEnun.DoubleJumping))
 			{
@@ -34,14 +37,14 @@ public class Player : Unit
 				}
 			}
 		}
-		else if (Input.GetKey(KeyCode.RightArrow) && !(UnitState.HasFlag(Enums.UnitStateEnun.FacingLeft) && UnitState.HasFlag(Enums.UnitStateEnun.Attacking)))
+		else if (Input.GetKey(KeyCode.D) && !(UnitState.HasFlag(Enums.UnitStateEnun.FacingLeft) && UnitState.HasFlag(Enums.UnitStateEnun.Attacking)))
 		{
 			if (UnitState.HasFlag(Enums.UnitStateEnun.FacingLeft)) SpawnDashPuff();
 
 			UnitState |= Enums.UnitStateEnun.Moving;
 			rigidBody.velocity = new Vector2(RunSpeed, rigidBody.velocity.y);
 		}
-		else if (Input.GetKey(KeyCode.LeftArrow) && !(UnitState.HasFlag(Enums.UnitStateEnun.FacingRight) && UnitState.HasFlag(Enums.UnitStateEnun.Attacking)))
+		else if (Input.GetKey(KeyCode.A) && !(UnitState.HasFlag(Enums.UnitStateEnun.FacingRight) && UnitState.HasFlag(Enums.UnitStateEnun.Attacking)))
 		{
 			if (UnitState.HasFlag(Enums.UnitStateEnun.FacingRight)) SpawnDashPuff();
 
@@ -49,16 +52,25 @@ public class Player : Unit
 			rigidBody.velocity = new Vector2(-RunSpeed, rigidBody.velocity.y);
 		}
 
-		//if (Input.GetKeyDown(KeyCode.F))
-		//{
-		//	if (AttackQueue.Count < 3)
-		//	{
-		//		AttackTypes.FirstOrDefault(attack => attack == CurrentAttack);
-		//		AttackQueue.Add();
-		//	}
-
-		//	horizontalAttackTrigger.TryAttack = true;
-		//}
+		if (Input.GetKeyDown(LightAttackKey))
+		{
+			if (AttackQueue.Count == 0)
+			{
+				var attack = AttackGraph.RootAttacks.FirstOrDefault(a => a.Type == Enums.AttackType.LightAttack);
+				if (attack != null)
+				{
+					horizontalAttackTrigger.TryAttack = attack;
+				}
+			}
+			else if (AttackQueue.Count > 0)
+			{
+				var attack = CurrentAttack.FollowupAttacks.FirstOrDefault(a => a.Type == Enums.AttackType.LightAttack);
+				if (attack != null)
+				{
+					horizontalAttackTrigger.TryAttack = attack;
+				}
+			}
+		}
 	}
 
 	private void SpawnDashPuff()
@@ -72,5 +84,3 @@ public class Player : Unit
 
 	}
 }
-
-//attacks have types, and also combo orders

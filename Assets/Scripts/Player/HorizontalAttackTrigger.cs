@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HorizontalAttackTrigger : MonoBehaviour
 {
-	public bool TryAttack = false;
+	public Attack TryAttack;
 	private Unit unit;
 
 	private float attackTimer;

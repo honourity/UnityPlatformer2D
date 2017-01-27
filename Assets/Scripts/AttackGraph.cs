@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
 
 namespace Assets.Scripts
 {
@@ -8,12 +8,55 @@ namespace Assets.Scripts
 
 		static AttackGraph()
 		{
-			//load .json file and deserialise into Attack graph
+			RootAttacks = new Attack[]
+			{
+				new Attack()
+				{
+					Type = Enums.AttackType.LightAttack,
+					AnimationKey = "light quick punch",
+					AudioClipName = "",
+					DeadlyRangeStart = 0f,
+					DeadlyRangeEnd = 0f,
+					Cooldown = 0f,
+					VelocityBoost = 0f,
+					Damage = 0,
+					FollowupAttacks = new Attack[]
+					{
+						new Attack()
+						{
+							Type = Enums.AttackType.LightAttack,
+							AnimationKey = "backwards kick",
+							AudioClipName = "",
+							DeadlyRangeStart = 0f,
+							DeadlyRangeEnd = 0f,
+							Cooldown = 0f,
+							VelocityBoost = 0f,
+							Damage = 0,
+							FollowupAttacks = new Attack[]
+							{
+								new Attack()
+								{
+									Type = Enums.AttackType.LightAttack,
+									AnimationKey = "heavy punch",
+									AudioClipName = "",
+									DeadlyRangeStart = 0f,
+									DeadlyRangeEnd = 0f,
+									Cooldown = 0f,
+									VelocityBoost = 0f,
+									Damage = 0,
+									FollowupAttacks = new Attack[0]
+								}
+							}
+						}
+					}
+				}
+			};
 		}
 	}
 
 	public class Attack
 	{
+		public Enums.AttackType Type { get; set; }
 		public string AnimationKey { get; set; }
 		public string AudioClipName { get; set; }
 		public float DeadlyRangeStart { get; set; }
@@ -26,43 +69,3 @@ namespace Assets.Scripts
 	}
 }
 
-/*
-
-	RootAttacks : [
-		{
-			AnimationKey : "HorizontalAttack1",
-			AudioClipName : "HorizontalAttack1AudioClip",
-			DeadlyRangeStart : 0,
-			DeadlyRangeEnd : 0,
-			Cooldown : 0,
-			VelocityBoot : 0,
-			AnimationLength : 0,
-			Damage : 0,
-			FollowupAttacks : [
-				{
-					AnimationKey : "HorizontalAttack2",
-					AudioClipName : "HorizontalAttack2AudioClip",
-					DeadlyRangeStart : 0,
-					DeadlyRangeEnd : 0,
-					Cooldown : 0,
-					VelocityBoot : 0,
-					AnimationLength : 0,
-					Damage : 0,
-					FollowupAttacks : [
-						{
-							AnimationKey : "HorizontalAttack3",
-							AudioClipName : "HorizontalAttack3AudioClip",
-							DeadlyRangeStart : 0,
-							DeadlyRangeEnd : 0,
-							Cooldown : 0,
-							VelocityBoot : 0,
-							AnimationLength : 0,
-							Damage : 0,
-							FollowupAttacks : []					
-						}
-					]
-				}
-			]
-		}
-	]
-*/
