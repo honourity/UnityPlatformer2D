@@ -12,8 +12,8 @@ namespace Assets.Scripts
 			{
 				new Attack()
 				{
-					Type = Enums.AttackType.LightAttack,
-					AnimationKey = "light quick punch",
+					Type = Enums.AttackKeyCode.LightAttack,
+					Name = Enums.AttackName.LightPunch,
 					AudioClipName = "",
 					DeadlyRangeStart = 0f,
 					DeadlyRangeEnd = 0f,
@@ -24,8 +24,8 @@ namespace Assets.Scripts
 					{
 						new Attack()
 						{
-							Type = Enums.AttackType.LightAttack,
-							AnimationKey = "backwards kick",
+							Type = Enums.AttackKeyCode.LightAttack,
+							Name = Enums.AttackName.LightKick,
 							AudioClipName = "",
 							DeadlyRangeStart = 0f,
 							DeadlyRangeEnd = 0f,
@@ -36,8 +36,8 @@ namespace Assets.Scripts
 							{
 								new Attack()
 								{
-									Type = Enums.AttackType.LightAttack,
-									AnimationKey = "heavy punch",
+									Type = Enums.AttackKeyCode.HeavyAttack,
+									Name = Enums.AttackName.HeavyPunch,
 									AudioClipName = "",
 									DeadlyRangeStart = 0f,
 									DeadlyRangeEnd = 0f,
@@ -56,8 +56,9 @@ namespace Assets.Scripts
 
 	public class Attack
 	{
-		public Enums.AttackType Type { get; set; }
-		public string AnimationKey { get; set; }
+		public Enums.AttackKeyCode Type { get; set; }
+		public Enums.AttackName Name { get; set; }
+		//public string AnimationKey { get; set; }
 		public string AudioClipName { get; set; }
 		public float DeadlyRangeStart { get; set; }
 		public float DeadlyRangeEnd { get; set; }

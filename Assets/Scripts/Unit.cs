@@ -12,7 +12,7 @@ public abstract class Unit : MonoBehaviour
 	public float JumpHeight = 12f;
 	public float MoveDampingRate = 0.5f;
 	public float FlightDampingRate = 0.1f;
-	public Enums.UnitStateEnun UnitState = Enums.UnitStateEnun.Grounded;
+	public Enums.UnitStateEnum UnitState = Enums.UnitStateEnum.Grounded;
 
 	public IList<Attack> AttackQueue = new List<Attack>();
 	public Attack CurrentAttack;
@@ -36,17 +36,17 @@ public abstract class Unit : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		UnitState = UnitState.NAND(Enums.UnitStateEnun.Moving);
+		UnitState = UnitState.NAND(Enums.UnitStateEnum.Moving);
 
 		// Apply landing
-		if (UnitState.HasFlag(Enums.UnitStateEnun.Landing))
+		if (UnitState.HasFlag(Enums.UnitStateEnum.Landing))
 		{
-			UnitState |= Enums.UnitStateEnun.Grounded;
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.Landing);
+			UnitState |= Enums.UnitStateEnum.Grounded;
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.Landing);
 		}
 
 		// Zero vertical velocity when we're on the ground
-		if (UnitState.HasFlag(Enums.UnitStateEnun.Grounded))
+		if (UnitState.HasFlag(Enums.UnitStateEnum.Grounded))
 		{
 			rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0);
 		}
@@ -55,73 +55,77 @@ public abstract class Unit : MonoBehaviour
 
 		MotionDamping();
 
+		UpdateUnitState();
+
+		var scale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+		if (UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft)) scale.x *= -1;
+		transform.localScale = scale;
+
+		UpdateAnimations();
+	}
+
+	private void UpdateUnitState()
+	{
 		if (rigidBody.velocity.y < 0)
 		{
-			UnitState |= Enums.UnitStateEnun.Falling;
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.Jumping);
+			UnitState |= Enums.UnitStateEnum.Falling;
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.Jumping);
 		}
 		else if (rigidBody.velocity.y >= 0)
 		{
-			UnitState |= Enums.UnitStateEnun.Jumping;
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.Falling);
+			UnitState |= Enums.UnitStateEnum.Jumping;
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.Falling);
 		}
 
-		if (UnitState.HasFlag(Enums.UnitStateEnun.Grounded) && !UnitState.HasFlag(Enums.UnitStateEnun.Falling))
+		if (UnitState.HasFlag(Enums.UnitStateEnum.Grounded) && !UnitState.HasFlag(Enums.UnitStateEnum.Falling))
 		{
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.Jumping);
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.DoubleJumping);
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.Jumping);
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.DoubleJumping);
 		}
 
-		if (rigidBody.velocity.x > 0 && UnitState.HasFlag(Enums.UnitStateEnun.Moving))
+		if (rigidBody.velocity.x > 0 && UnitState.HasFlag(Enums.UnitStateEnum.Moving))
 		{
-			UnitState |= Enums.UnitStateEnun.FacingRight;
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.FacingLeft);
+			UnitState |= Enums.UnitStateEnum.FacingRight;
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.FacingLeft);
 		}
-		else if (rigidBody.velocity.x < 0 && UnitState.HasFlag(Enums.UnitStateEnun.Moving))
+		else if (rigidBody.velocity.x < 0 && UnitState.HasFlag(Enums.UnitStateEnum.Moving))
 		{
-			UnitState |= Enums.UnitStateEnun.FacingLeft;
-			UnitState = UnitState.NAND(Enums.UnitStateEnun.FacingRight);
+			UnitState |= Enums.UnitStateEnum.FacingLeft;
+			UnitState = UnitState.NAND(Enums.UnitStateEnum.FacingRight);
 		}
+	}
 
-		var scale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-		if (UnitState.HasFlag(Enums.UnitStateEnun.FacingLeft)) scale.x *= -1;
-		transform.localScale = scale;
-
+	private void UpdateAnimations()
+	{
 		//update animator with latest data
-		animator.SetBool("Grounded", UnitState.HasFlag(Enums.UnitStateEnun.Grounded));
-		animator.SetBool("Running", UnitState.HasFlag(Enums.UnitStateEnun.Moving));
-		animator.SetBool("Jumping", UnitState.HasFlag(Enums.UnitStateEnun.Jumping));
-		animator.SetBool("Falling", UnitState.HasFlag(Enums.UnitStateEnun.Falling));
-		animator.SetBool("Attacking", UnitState.HasFlag(Enums.UnitStateEnun.Attacking));
+		animator.SetBool("Grounded", UnitState.HasFlag(Enums.UnitStateEnum.Grounded));
+		animator.SetBool("Running", UnitState.HasFlag(Enums.UnitStateEnum.Moving));
+		animator.SetBool("Jumping", UnitState.HasFlag(Enums.UnitStateEnum.Jumping));
+		animator.SetBool("Falling", UnitState.HasFlag(Enums.UnitStateEnum.Falling));
+		//animator.SetBool("Attacking", UnitState.HasFlag(Enums.UnitStateEnum.Attacking));
 
+		animator.SetBool("LightPunch", false);
+		animator.SetBool("LightKick", false);
+		animator.SetBool("HeavyPunch", false);
 
-		////hopefully will catch null reference exception in the case Enum doesnt match CurrentAttack property
-		//if (UnitState.HasFlag(Enums.UnitStateEnun.Attacking))
-		//{
-		//	//starts current attack animation
-		//	animator.SetBool(CurrentAttack.AttackAnimationKey, true);
-		//}
-		//else
-		//{
-		//	//stops all attack animations
-		//	foreach(var attack in AttackTypes)
-		//	{
-		//		animator.SetBool(attack.AttackAnimationKey, false);
-		//	}
-		//}		
+		if (CurrentAttack != null)
+		{
+			//starts/continues current attack animation
+			animator.SetBool(CurrentAttack.Name.ToString(), true);
+		}
 	}
 
 	private void MotionDamping()
 	{
 		if (Math.Abs(rigidBody.velocity.x) > 0
-			&& !UnitState.HasFlag(Enums.UnitStateEnun.Moving)
-			&& UnitState.HasFlag(Enums.UnitStateEnun.Grounded))
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Moving)
+			&& UnitState.HasFlag(Enums.UnitStateEnum.Grounded))
 		{
 			rigidBody.velocity = new Vector2(rigidBody.velocity.x / MoveDampingRate, rigidBody.velocity.y);
 		}
 		else if (Math.Abs(rigidBody.velocity.x) > 0
-			&& !UnitState.HasFlag(Enums.UnitStateEnun.Moving)
-			&& !UnitState.HasFlag(Enums.UnitStateEnun.Grounded))
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Moving)
+			&& !UnitState.HasFlag(Enums.UnitStateEnum.Grounded))
 		{
 			rigidBody.velocity = new Vector2(rigidBody.velocity.x / FlightDampingRate, rigidBody.velocity.y);
 		}
