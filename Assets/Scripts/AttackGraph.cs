@@ -14,10 +14,10 @@ namespace Assets.Scripts
 				{
 					Type = Enums.AttackKeyCode.LightAttack,
 					Name = Enums.AttackName.LightPunch,
-					AudioClipName = "",
 					DeadlyRangeStart = 0f,
 					DeadlyRangeEnd = 0f,
-					Cooldown = 0f,
+					Cooldown = 1f,
+					AnimationLength = 1f,
 					VelocityBoost = 0f,
 					Damage = 0,
 					FollowupAttacks = new Attack[]
@@ -26,10 +26,10 @@ namespace Assets.Scripts
 						{
 							Type = Enums.AttackKeyCode.LightAttack,
 							Name = Enums.AttackName.LightKick,
-							AudioClipName = "",
 							DeadlyRangeStart = 0f,
 							DeadlyRangeEnd = 0f,
-							Cooldown = 0f,
+							Cooldown = 1f,
+							AnimationLength = 1f,
 							VelocityBoost = 0f,
 							Damage = 0,
 							FollowupAttacks = new Attack[]
@@ -38,10 +38,10 @@ namespace Assets.Scripts
 								{
 									Type = Enums.AttackKeyCode.HeavyAttack,
 									Name = Enums.AttackName.HeavyPunch,
-									AudioClipName = "",
 									DeadlyRangeStart = 0f,
 									DeadlyRangeEnd = 0f,
-									Cooldown = 0f,
+									Cooldown = 1f,
+									AnimationLength = 1f,
 									VelocityBoost = 0f,
 									Damage = 0,
 									FollowupAttacks = new Attack[0]

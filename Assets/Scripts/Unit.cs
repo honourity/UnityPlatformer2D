@@ -14,6 +14,8 @@ public abstract class Unit : MonoBehaviour
 	public float FlightDampingRate = 0.1f;
 	public Enums.UnitStateEnum UnitState = Enums.UnitStateEnum.Grounded;
 
+	public AudioSource AudioSource;
+
 	public IList<Attack> AttackQueue = new List<Attack>();
 	public Attack CurrentAttack;
 
@@ -26,6 +28,8 @@ public abstract class Unit : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		AudioSource = gameObject.AddComponent<AudioSource>();
+
 		rigidBody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 

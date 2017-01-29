@@ -10,7 +10,7 @@ public class AttackTrigger : MonoBehaviour
 	public Attack TryAttack;
 
 	private Unit unit;
-	private AudioSource audioSource;
+	private AudioClip[] audioClips;
 	private List<Collider> colliders;
 	private float attackTimer;
 	private float previousAttackCooldown;
@@ -18,8 +18,10 @@ public class AttackTrigger : MonoBehaviour
 	private void Awake()
 	{
 		unit = gameObject.transform.parent.gameObject.GetComponent<Unit>();
-		audioSource = gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
 		colliders = gameObject.GetComponents<Collider>().ToList();
+
+		//load audioclips
+		audioClips = Resources.LoadAll<AudioClip>("Audio");
 
 		//disable all attack colliders
 		colliders.ForEach(collider => collider.enabled = false);
@@ -108,7 +110,8 @@ public class AttackTrigger : MonoBehaviour
 		unit.CurrentAttack = unit.AttackQueue.First();
 		unit.AttackQueue.Remove(unit.CurrentAttack);
 
-		audioSource.PlayOneShot(unit.CurrentAttack.Name.ToString());
+		var audioClip = audioClips.FirstOrDefault(clip => clip.name == unit.CurrentAttack.Name.ToString());
+		unit.AudioSource.PlayOneShot(audioClip);
 
 		previousAttackCooldown = unit.CurrentAttack.Cooldown;
 		attackTimer = 0;
