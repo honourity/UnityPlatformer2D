@@ -14,36 +14,36 @@ namespace Assets.Scripts
 				{
 					Type = Enums.AttackKeyCode.LightAttack,
 					Name = Enums.AttackName.LightPunch,
-					DeadlyRangeStart = 0f,
-					DeadlyRangeEnd = 0f,
+					DeadlyRangeStart = 0.2f,
+					DeadlyRangeEnd = 0.8f,
 					Cooldown = 1f,
 					AnimationLength = 1f,
 					VelocityBoost = 0f,
-					Damage = 0,
+					Damage = 1,
 					FollowupAttacks = new Attack[]
 					{
 						new Attack()
 						{
 							Type = Enums.AttackKeyCode.LightAttack,
 							Name = Enums.AttackName.LightKick,
-							DeadlyRangeStart = 0f,
-							DeadlyRangeEnd = 0f,
+							DeadlyRangeStart = 0.2f,
+							DeadlyRangeEnd = 0.8f,
 							Cooldown = 1f,
 							AnimationLength = 1f,
 							VelocityBoost = 0f,
-							Damage = 0,
+							Damage = 1,
 							FollowupAttacks = new Attack[]
 							{
 								new Attack()
 								{
-									Type = Enums.AttackKeyCode.HeavyAttack,
+									Type = Enums.AttackKeyCode.LightAttack,
 									Name = Enums.AttackName.HeavyPunch,
 									DeadlyRangeStart = 0f,
 									DeadlyRangeEnd = 0f,
 									Cooldown = 1f,
 									AnimationLength = 1f,
 									VelocityBoost = 0f,
-									Damage = 0,
+									Damage = 1,
 									FollowupAttacks = new Attack[0]
 								}
 							}

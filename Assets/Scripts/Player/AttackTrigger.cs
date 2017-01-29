@@ -10,15 +10,17 @@ public class AttackTrigger : MonoBehaviour
 	public Attack TryAttack;
 
 	private Unit unit;
+	private AudioSource audioSource;
 	private AudioClip[] audioClips;
-	private List<Collider> colliders;
+	private List<Collider2D> colliders;
 	private float attackTimer;
 	private float previousAttackCooldown;
 
 	private void Awake()
 	{
 		unit = gameObject.transform.parent.gameObject.GetComponent<Unit>();
-		colliders = gameObject.GetComponents<Collider>().ToList();
+		audioSource = gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
+		colliders = gameObject.GetComponents<Collider2D>().ToList();
 
 		//load audioclips
 		audioClips = Resources.LoadAll<AudioClip>("Audio");
@@ -75,6 +77,8 @@ public class AttackTrigger : MonoBehaviour
 
 		#region Collider management
 
+		colliders.ToList().ForEach(collider => collider.enabled = false);
+
 		if (unit.CurrentAttack != null)
 		{
 			if (attackTimer < unit.CurrentAttack.AnimationLength)
@@ -82,7 +86,6 @@ public class AttackTrigger : MonoBehaviour
 				if (attackTimer >= unit.CurrentAttack.DeadlyRangeStart && attackTimer < unit.CurrentAttack.DeadlyRangeEnd)
 				{
 					colliders.Where(collider => collider.sharedMaterial.name == unit.CurrentAttack.Name.ToString()).ToList().ForEach(collider => collider.enabled = true);
-					colliders.Where(collider => collider.sharedMaterial.name != unit.CurrentAttack.Name.ToString()).ToList().ForEach(collider => collider.enabled = false);
 				}
 			}
 		}
@@ -111,7 +114,7 @@ public class AttackTrigger : MonoBehaviour
 		unit.AttackQueue.Remove(unit.CurrentAttack);
 
 		var audioClip = audioClips.FirstOrDefault(clip => clip.name == unit.CurrentAttack.Name.ToString());
-		unit.AudioSource.PlayOneShot(audioClip);
+		audioSource.PlayOneShot(audioClip);
 
 		previousAttackCooldown = unit.CurrentAttack.Cooldown;
 		attackTimer = 0;
