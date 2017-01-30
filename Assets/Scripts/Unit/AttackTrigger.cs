@@ -42,7 +42,12 @@ public class AttackTrigger : MonoBehaviour
 
 		if (TryAttack != null)
 		{
-			if (unit.AttackQueue.Count >= AttackQueueLength)
+			if (unit.AttackQueue.Count > 0)
+			{
+				//currentattack or last attack in queue
+				//something (see comment below)
+			}
+			else if (unit.AttackQueue.Count >= AttackQueueLength)
 			{
 				unit.AttackQueue[unit.AttackQueue.Count - 1] = TryAttack;
 			}
@@ -59,25 +64,16 @@ public class AttackTrigger : MonoBehaviour
 
 		#region Process existing attack state
 
-		if (unit.CurrentAttack != null)
+		//need to figure out if attack is part of a chain,
+		// in which case use animationlength instead of cooldown to decide when to start next attack
+		if ((previousAttack == null || attackTimer > previousAttack.Cooldown) && unit.AttackQueue.Count > 0)
 		{
-			//need to figure out if attack is part of a chain,
-			// in which case use animationlength instead of cooldown to decide when to start next attack
-			if (attackTimer > previousAttack.Cooldown && unit.AttackQueue.Count > 0)
-			{
-				BeginNewAttack();
-			}
-			else if (attackTimer > unit.CurrentAttack.AnimationLength)
-			{
-				unit.CurrentAttack = null;
-			}
+			BeginNewAttack();
 		}
-		else
+		else if (unit.CurrentAttack != null && attackTimer > unit.CurrentAttack.AnimationLength)
 		{
-			if (attackTimer > previousAttack.Cooldown && unit.AttackQueue.Count > 0)
-			{
-				BeginNewAttack();
-			}
+			previousAttack = unit.CurrentAttack;
+			unit.CurrentAttack = null;
 		}
 
 		#endregion
