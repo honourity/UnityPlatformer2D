@@ -27,10 +27,10 @@ namespace Assets.Scripts
 						{
 							Type = Enums.AttackKeyCode.LightAttack,
 							Name = Enums.AttackName.LightKick,
-							DeadlyRangeStart = 0.2f,
-							DeadlyRangeEnd = 0.8f,
+							DeadlyRangeStart = 0.05f,
+							DeadlyRangeEnd = 0.5f,
 							Cooldown = 1f,
-							AnimationLength = 1f,
+							AnimationLength = 0.517f,
 							VelocityBoost = 0f,
 							Damage = 1,
 							FollowupAttacks = new Attack[]
@@ -39,10 +39,10 @@ namespace Assets.Scripts
 								{
 									Type = Enums.AttackKeyCode.LightAttack,
 									Name = Enums.AttackName.HeavyPunch,
-									DeadlyRangeStart = 0f,
-									DeadlyRangeEnd = 0f,
+									DeadlyRangeStart = 0.1f,
+									DeadlyRangeEnd = 0.7f,
 									Cooldown = 1f,
-									AnimationLength = 1f,
+									AnimationLength = 0.767f,
 									VelocityBoost = 0f,
 									Damage = 1,
 									FollowupAttacks = new Attack[0]

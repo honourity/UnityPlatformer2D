@@ -55,7 +55,9 @@ public class Player : Unit
 
 		if (Input.GetKeyDown((KeyCode)Enums.AttackKeyCode.LightAttack))
 		{
-			if (CurrentAttack == null && AttackQueue.Count == 0)
+			//when animation is finished, but cooldown is still active,
+			// we dont want to try a root attack
+			if (CurrentAttack == null && AttackQueue.Count == 0 && !attackTrigger.PreviousAttackInCooldown())
 			{
 				var attack = AttackGraph.RootAttacks.FirstOrDefault(a => a.Type == Enums.AttackKeyCode.LightAttack);
 				if (attack != null)

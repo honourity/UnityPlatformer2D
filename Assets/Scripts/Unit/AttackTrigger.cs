@@ -21,6 +21,18 @@ public class AttackTrigger : MonoBehaviour
 		unit.AttackQueue.Clear();
 	}
 
+	public bool PreviousAttackInCooldown()
+	{
+		if (unit.CurrentAttack == null && previousAttack != null && attackTimer < previousAttack.Cooldown)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	private void Awake()
 	{
 		unit = gameObject.transform.parent.gameObject.GetComponent<Unit>();
@@ -42,23 +54,22 @@ public class AttackTrigger : MonoBehaviour
 
 		if (TryAttack != null)
 		{
-			if (unit.AttackQueue.Count > 0)
+			//cant queue/chain root attacks
+			if ((unit.CurrentAttack == null || unit.AttackQueue.Count > 0) || !AttackGraph.RootAttacks.Contains(TryAttack))
 			{
-				//currentattack or last attack in queue
-				//something (see comment below)
-			}
-			else if (unit.AttackQueue.Count >= AttackQueueLength)
-			{
-				unit.AttackQueue[unit.AttackQueue.Count - 1] = TryAttack;
-			}
-			else
-			{
-				unit.AttackQueue.Add(TryAttack);
+				if (unit.AttackQueue.Count >= AttackQueueLength)
+				{
+					unit.AttackQueue[unit.AttackQueue.Count - 1] = TryAttack;
+				}
+				else
+				{
+					unit.AttackQueue.Add(TryAttack);
+				}
 			}
 
 			TryAttack = null;
 		}
-		
+
 
 		#endregion
 
@@ -66,7 +77,11 @@ public class AttackTrigger : MonoBehaviour
 
 		//need to figure out if attack is part of a chain,
 		// in which case use animationlength instead of cooldown to decide when to start next attack
-		if ((previousAttack == null || attackTimer > previousAttack.Cooldown) && unit.AttackQueue.Count > 0)
+		if ((previousAttack == null || attackTimer > previousAttack.AnimationLength) && unit.AttackQueue.Count > 0 && !AttackGraph.RootAttacks.Contains(unit.AttackQueue.FirstOrDefault()))
+		{
+			BeginNewAttack();
+		}
+		else if ((previousAttack == null || attackTimer > previousAttack.Cooldown) && unit.AttackQueue.Count > 0)
 		{
 			BeginNewAttack();
 		}
