@@ -13,8 +13,13 @@ public class AttackTrigger : MonoBehaviour
 	private AudioSource audioSource;
 	private AudioClip[] audioClips;
 	private List<Collider2D> colliders;
+	private Attack previousAttack;
 	private float attackTimer;
-	private float previousAttackCooldown;
+
+	public void ClearAttackQueue()
+	{
+		unit.AttackQueue.Clear();
+	}
 
 	private void Awake()
 	{
@@ -56,7 +61,9 @@ public class AttackTrigger : MonoBehaviour
 
 		if (unit.CurrentAttack != null)
 		{
-			if (attackTimer > previousAttackCooldown && unit.AttackQueue.Count > 0)
+			//need to figure out if attack is part of a chain,
+			// in which case use animationlength instead of cooldown to decide when to start next attack
+			if (attackTimer > previousAttack.Cooldown && unit.AttackQueue.Count > 0)
 			{
 				BeginNewAttack();
 			}
@@ -67,7 +74,7 @@ public class AttackTrigger : MonoBehaviour
 		}
 		else
 		{
-			if (attackTimer > previousAttackCooldown && unit.AttackQueue.Count > 0)
+			if (attackTimer > previousAttack.Cooldown && unit.AttackQueue.Count > 0)
 			{
 				BeginNewAttack();
 			}
@@ -77,7 +84,7 @@ public class AttackTrigger : MonoBehaviour
 
 		#region Collider management
 
-		colliders.ToList().ForEach(collider => collider.enabled = false);
+		colliders.ForEach(collider => collider.enabled = false);
 
 		if (unit.CurrentAttack != null)
 		{
@@ -85,7 +92,7 @@ public class AttackTrigger : MonoBehaviour
 			{
 				if (attackTimer >= unit.CurrentAttack.DeadlyRangeStart && attackTimer < unit.CurrentAttack.DeadlyRangeEnd)
 				{
-					colliders.Where(collider => collider.sharedMaterial.name == unit.CurrentAttack.Name.ToString()).ToList().ForEach(collider => collider.enabled = true);
+					colliders.FirstOrDefault(collider => collider.sharedMaterial.name == unit.CurrentAttack.Name.ToString()).enabled = true;
 				}
 			}
 		}
@@ -116,7 +123,7 @@ public class AttackTrigger : MonoBehaviour
 		var audioClip = audioClips.FirstOrDefault(clip => clip.name == unit.CurrentAttack.Name.ToString());
 		audioSource.PlayOneShot(audioClip);
 
-		previousAttackCooldown = unit.CurrentAttack.Cooldown;
+		previousAttack = unit.CurrentAttack;
 		attackTimer = 0;
 	}
 

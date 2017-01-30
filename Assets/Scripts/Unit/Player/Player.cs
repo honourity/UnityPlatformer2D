@@ -7,11 +7,11 @@ public class Player : Unit
 {
 	public Transform DashPuff;
 
-	private AttackTrigger horizontalAttackTrigger;
+	private AttackTrigger attackTrigger;
 
 	void Awake()
 	{
-		horizontalAttackTrigger = gameObject.GetComponentInChildren<AttackTrigger>();
+		attackTrigger = gameObject.GetComponentInChildren<AttackTrigger>();
 	}
 
 	public override void TakeAction()
@@ -40,6 +40,8 @@ public class Player : Unit
 
 			UnitState |= Enums.UnitStateEnum.Moving;
 			rigidBody.velocity = new Vector2(RunSpeed, rigidBody.velocity.y);
+
+			attackTrigger.ClearAttackQueue();
 		}
 		else if (Input.GetKey(KeyCode.A) && !(UnitState.HasFlag(Enums.UnitStateEnum.FacingRight) && CurrentAttack != null))
 		{
@@ -47,24 +49,26 @@ public class Player : Unit
 
 			UnitState |= Enums.UnitStateEnum.Moving;
 			rigidBody.velocity = new Vector2(-RunSpeed, rigidBody.velocity.y);
+
+			attackTrigger.ClearAttackQueue();
 		}
 
 		if (Input.GetKeyDown((KeyCode)Enums.AttackKeyCode.LightAttack))
 		{
-			if (AttackQueue.Count == 0)
+			if (CurrentAttack == null && AttackQueue.Count == 0)
 			{
 				var attack = AttackGraph.RootAttacks.FirstOrDefault(a => a.Type == Enums.AttackKeyCode.LightAttack);
 				if (attack != null)
 				{
-					horizontalAttackTrigger.TryAttack = attack;
+					attackTrigger.TryAttack = attack;
 				}
 			}
-			else if (AttackQueue.Count > 0)
+			else if (CurrentAttack != null)
 			{
 				var attack = CurrentAttack.FollowupAttacks.FirstOrDefault(a => a.Type == Enums.AttackKeyCode.LightAttack);
 				if (attack != null)
 				{
-					horizontalAttackTrigger.TryAttack = attack;
+					attackTrigger.TryAttack = attack;
 				}
 			}
 		}

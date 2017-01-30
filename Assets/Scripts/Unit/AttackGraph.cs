@@ -12,12 +12,13 @@ namespace Assets.Scripts
 			{
 				new Attack()
 				{
+					//during cooldown and/or animation it queues up the same attack? not the next one
 					Type = Enums.AttackKeyCode.LightAttack,
 					Name = Enums.AttackName.LightPunch,
-					DeadlyRangeStart = 0.2f,
-					DeadlyRangeEnd = 0.8f,
+					DeadlyRangeStart = 0.04f,
+					DeadlyRangeEnd = 0.15f,
 					Cooldown = 1f,
-					AnimationLength = 1f,
+					AnimationLength = 0.183f,
 					VelocityBoost = 0f,
 					Damage = 1,
 					FollowupAttacks = new Attack[]
@@ -58,8 +59,6 @@ namespace Assets.Scripts
 	{
 		public Enums.AttackKeyCode Type { get; set; }
 		public Enums.AttackName Name { get; set; }
-		//public string AnimationKey { get; set; }
-		public string AudioClipName { get; set; }
 		public float DeadlyRangeStart { get; set; }
 		public float DeadlyRangeEnd { get; set; }
 		public float Cooldown { get; set; }

@@ -2,21 +2,21 @@
 
 public class AnimationVoiceScript : StateMachineBehaviour
 {
-    public AudioClip audio;
-    public GameObject audioSourceContainer;
+    //public AudioClip audio;
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
-    void Start()
-    {
-        audioSource = audioSourceContainer.GetComponent<AudioSource>();
-    }
+    //void Start()
+    //{
+        
+    //    audioSource = gameObject.GetComponent<AudioSource>();
+    //}
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        audioSource.PlayOneShot(audio);
-    }
+    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    audioSource.PlayOneShot(audio);
+    //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
