@@ -7,6 +7,8 @@ public abstract class Unit : MonoBehaviour
 {
 	public int HealthMax = 10;
 	public int HealthCurrent = 10;
+	public int StaminaMax = 100;
+	public int StaminaCurrent = 100;
 
 	public float RunSpeed = 6.1875f;
 	public float JumpHeight = 12f;

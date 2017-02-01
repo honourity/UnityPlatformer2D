@@ -34,7 +34,7 @@ public class Player : Unit
 				}
 			}
 		}
-		else if (Input.GetKey(KeyCode.D) && !(UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft) && CurrentAttack != null))
+		else if (Input.GetKey(KeyCode.D))
 		{
 			if (UnitState.HasFlag(Enums.UnitStateEnum.FacingLeft)) SpawnDashPuff();
 
@@ -43,7 +43,7 @@ public class Player : Unit
 
 			attackTrigger.ClearAttackQueue();
 		}
-		else if (Input.GetKey(KeyCode.A) && !(UnitState.HasFlag(Enums.UnitStateEnum.FacingRight) && CurrentAttack != null))
+		else if (Input.GetKey(KeyCode.A))
 		{
 			if (UnitState.HasFlag(Enums.UnitStateEnum.FacingRight)) SpawnDashPuff();
 

@@ -19,6 +19,9 @@ public class AttackTrigger : MonoBehaviour
 	public void ClearAttackQueue()
 	{
 		unit.AttackQueue.Clear();
+
+		previousAttack = unit.CurrentAttack;
+		unit.CurrentAttack = null;
 	}
 
 	public bool PreviousAttackInCooldown()

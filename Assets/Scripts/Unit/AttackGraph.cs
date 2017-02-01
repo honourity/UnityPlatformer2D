@@ -21,6 +21,7 @@ namespace Assets.Scripts
 					AnimationLength = 0.183f,
 					VelocityBoost = 0f,
 					Damage = 1,
+					StaminaCost = 0,
 					FollowupAttacks = new Attack[]
 					{
 						new Attack()
@@ -33,6 +34,7 @@ namespace Assets.Scripts
 							AnimationLength = 0.517f,
 							VelocityBoost = 0f,
 							Damage = 1,
+							StaminaCost = 0,
 							FollowupAttacks = new Attack[]
 							{
 								new Attack()
@@ -45,6 +47,7 @@ namespace Assets.Scripts
 									AnimationLength = 0.767f,
 									VelocityBoost = 0f,
 									Damage = 1,
+									StaminaCost = 0,
 									FollowupAttacks = new Attack[0]
 								}
 							}
@@ -65,6 +68,7 @@ namespace Assets.Scripts
 		public float VelocityBoost { get; set; }
 		public float AnimationLength { get; set; }
 		public int Damage { get; set; }
+		public int StaminaCost { get; set; }
 		public Attack[] FollowupAttacks { get; set; }
 	}
 }
